@@ -1,5 +1,6 @@
 package com.expleo.steps;
 
+import com.expleo.config.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,6 +15,9 @@ public class Demos1Steps {
     }
     @When("I send the request to create a repository with name as {string} and with the description {string}")
     public void i_send_the_request_to_create_a_repository_with_name_as_and_with_the_description(String repoName, String description) {
+        String baseURI= ConfigReader.getBaseURI();
+        System.out.println(baseURI);
+
         System.out.println("When" +repoName+ "with" + description);
     }
     @Then("the response code should be {int}")

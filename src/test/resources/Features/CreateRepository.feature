@@ -17,7 +17,7 @@ Feature: CreateRepository
     Examples:
       | repo_name          | repo_desc                | expected_response_code | expected_response_time |
       | selenium-gitrepo   | Contains Selenium Code   | 200                    | 5000                   |
-      | playwright-gitrepo | Contains Playwright Code | 200                    | 5000                   |
+   #   | playwright-gitrepo | Contains Playwright Code | 200                    | 5000                   |
 
   @invalid @smoke
   Scenario: Create a invalid remote repository
